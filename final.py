@@ -134,16 +134,17 @@ if uploaded_file:
         st.write("🎯 Probability of Finishing On Time (based on Monte Carlo with betaPERT distribution):")
         st.dataframe(simulated_df)
 
-        """
+       
         # Download simulation results
-        output = io.BytesIO()
-        with pd.ExcelWriter(output, engine='xlsxwriter') as writer:
-            simulated_df.to_excel(writer, index=False)
-        st.download_button("Download Simulation Results", output.getvalue(), file_name="Resp-Simulation.xlsx")
-        """
+       # output = io.BytesIO()
+        #with pd.ExcelWriter(output, engine='xlsxwriter') as writer:
+            #simulated_df.to_excel(writer, index=False)
+        #st.download_button("Download Simulation Results", output.getvalue(), file_name="Resp-Simulation.xlsx")
+        
 
     else:
         st.warning("No valid RESP data found in uploaded file.")
+
 
 
 
