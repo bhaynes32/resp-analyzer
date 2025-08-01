@@ -20,6 +20,9 @@ uploaded_file = st.file_uploader(
     type="xlsx",
     accept_multiple_files=False
 )
+# Add spacing at the bottom
+st.markdown("<br><br><br>", unsafe_allow_html=True)
+
 
 
 min_activities = st.number_input(
@@ -148,6 +151,7 @@ if uploaded_file:
 
     else:
         st.warning("No valid RESP data found in uploaded file.")
+
 
 
 
