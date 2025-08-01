@@ -16,12 +16,13 @@ uploaded_file = st.file_uploader(
     "- Make sure your data starts in the **first cell (A1)** of the spreadsheet.\n"
     "- Do **not** leave any blank rows above the headers.\n"
     "- Use the **'App Export' layout** when exporting from P6 to ensure proper formatting.\n"
+    # Add spacing at the bottom
+    st.markdown("<br><br><br>", unsafe_allow_html=True)
     "\n📂 **Upload Excel file(s) (.xlsx)**",
     type="xlsx",
     accept_multiple_files=False
 )
-# Add spacing at the bottom
-st.markdown("<br><br><br>", unsafe_allow_html=True)
+
 
 
 
@@ -151,6 +152,7 @@ if uploaded_file:
 
     else:
         st.warning("No valid RESP data found in uploaded file.")
+
 
 
 
