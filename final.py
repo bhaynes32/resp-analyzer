@@ -20,7 +20,7 @@ st.markdown("""
 """)
 
 # Add spacing
-st.markdown("<br><br><br>", unsafe_allow_html=True)
+st.markdown("<br><br>", unsafe_allow_html=True)
 
 # File uploader
 uploaded_file = st.file_uploader(
@@ -159,6 +159,7 @@ if uploaded_file:
 
     else:
         st.warning("No valid RESP data found in uploaded file.")
+
 
 
 
