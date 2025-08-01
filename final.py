@@ -11,12 +11,16 @@ uploaded_file = st.file_uploader(
     "- `Original Duration`\n"
     "- `Actual Duration`\n"
     "- `Activity Status`\n"
-    "- `Resp` (this one could be project specific like `Resp6`) \n"
-    "\n 📂 **Upload Excel file(s) (.xlsx)** ",
+    "- `Resp` (this one could be project specific like `Resp6`)\n"
+    "\n📌 **Important Instructions:**\n"
+    "- Make sure your data starts in the **first cell (A1)** of the spreadsheet.\n"
+    "- Do **not** leave any blank rows above the headers.\n"
+    "- Use the **'App Export' layout** when exporting from P6 to ensure proper formatting.\n"
+    "\n📂 **Upload Excel file(s) (.xlsx)**",
     type="xlsx",
     accept_multiple_files=False
-    
 )
+
 
 min_activities = st.number_input(
     "Minimum # of Activities per RESP Group (to include in summary)", 
@@ -144,6 +148,7 @@ if uploaded_file:
 
     else:
         st.warning("No valid RESP data found in uploaded file.")
+
 
 
 
